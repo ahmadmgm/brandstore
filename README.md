@@ -1,2 +1,3 @@
 # Brand Store
-brand store is project about beauty and perfume products 
+brand store is a project about beauty and perfume products
+ 
