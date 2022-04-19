@@ -1,0 +1,48 @@
+.product {
+  min-height: 232px;
+  margin: 20px auto;
+  padding: 14px;
+  border: 1px solid #ccc;
+  .product-description {
+    display: flex;
+    margin-top: 15%;
+    min-height: 81px;
+    .right-discription {
+      text-align: right;
+      flex-basis: 50%;
+      align-self: flex-end;
+      .save-price {
+        display: block;
+        width: 100%;
+        float: right;
+        font-weight: bold;
+        font-size: 11px;
+      }
+      .percentage {
+        background: #9ce62b;
+        width: 30%;
+        float: right;
+        text-align: center;
+        padding: 6px;
+        font-size: 10px;
+      }
+    }
+    .left-description {
+      flex-basis: 70%;
+    }
+    .prod-img {
+      margin-bottom: 30px;
+    }
+    .product-desc {
+      display: block;
+      color: #898585;
+      font-size: 11px;
+    }
+    .price {
+      color: red;
+    }
+  }
+}
+.remove-padding-left {
+  padding-left: 0px !important;
+}
