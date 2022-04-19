@@ -2,17 +2,23 @@
 
 <script>
 import ProductsService from "../services/products.servies";
+import { eventBus } from "../../../../src/main";
+import PopupDialog from "../../popup-dialog/components/popup-dialog.vue";
 export default {
   name: "Products",
   data() {
     return {
       productData: "",
+      showPopup: false,
+      productName: "",
     };
   },
-  props: {},
-  mounted() {},
+
   created() {
     this.getAllProducts();
+    eventBus.$on("closeDialog", (data) => {
+      this.showPopup = data;
+    });
   },
   methods: {
     calcPricePercentage(prodPrice) {
@@ -40,6 +46,13 @@ export default {
         this.productData = prodData.data.hits;
       });
     },
+    showNotifyMePopup(productName) {
+      this.showPopup = true;
+      this.productName = productName;
+    },
+  },
+  components: {
+    PopupDialog,
   },
 };
 </script>

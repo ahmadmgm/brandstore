@@ -22,7 +22,7 @@
 <script>
 import { eventBus } from "../../../../src/main";
 export default {
-  name: "ProductsDetails",
+  name: "PopupDialog",
   data() {
     return {};
   },
